@@ -1,0 +1,85 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:layout_marginTop="20dp"
+    android:background="@color/darker_gray"
+    tools:context=".ConnFragment">
+
+    <Spinner
+        android:id="@+id/spn_connection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="200dp"
+        android:background="@android:color/transparent" />
+
+    <EditText
+        android:id="@+id/etIP"
+        style="@style/EditTextStyleWhite"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spn_connection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:autofillHints="IP-Address"
+        android:hint="@string/ip_address"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPort"
+        style="@style/EditTextStyleWhite"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etIP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="@string/port_no"
+        android:inputType="number"
+        android:padding="5dp"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPort"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/gray_404"
+        android:padding="10dp"
+        android:text="@string/connect_to_server"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConnect"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/gray_404"
+        android:text="@string/disconnect_to_server"
+        android:textColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnDisconnect"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="28dp"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="-4dp">
+
+    </fragment>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        android:layout_width="377dp"
+        android:layout_height="45dp"
+        android:background="@drawable/custom_bg"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintHorizontal_bias="0.556"
+        custom:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="-2dp"
+            android:text="H"
+            android:textColor="@color/dark_red"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@+id/tvHeight" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="-2dp"
+            android:text="8.56"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@+id/tvm" />
+
+        <TextView
+            android:id="@+id/tvVelocity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="-2dp"
+            android:text="1.2"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toTopOf="@+id/tvHeight"
+            custom:layout_constraintEnd_toStartOf="@+id/tvms"
+            custom:layout_constraintTop_toTopOf="parent"
+            custom:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-2dp"
+            android:text="m/s"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toTopOf="@+id/tvHeight"
+            custom:layout_constraintEnd_toStartOf="@+id/armbtn"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-2dp"
+            android:text="m"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@+id/armbtn" />
+
+        <Button
+            android:id="@+id/armbtn"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:background="@drawable/custom_button"
+            android:text="AR"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintHorizontal_bias="0.4"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+        <Button
+            android:id="@+id/landbtn"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/custom_button"
+            android:text="LD"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintStart_toEndOf="@+id/armbtn"
+            custom:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Lat:"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            custom:layout_constraintStart_toEndOf="@+id/landbtn"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="5dp"
+            android:text="21.00662999"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            custom:layout_constraintStart_toEndOf="@+id/tvLat"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Lon:"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintStart_toEndOf="@+id/landbtn"
+            custom:layout_constraintTop_toBottomOf="@+id/tvLat" />
+
+        <TextView
+            android:id="@+id/tvLongtitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="5dp"
+            android:text="105.84283368"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintStart_toEndOf="@+id/tvLon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/custom_bg"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/drawmapbtn2"
+        android:layout_marginBottom="10dp">
+
+        <ScrollView
+            android:id="@+id/Sensor_scollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/Sensor_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/camEnableSw"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/ic_baseline_photo_camera_24"
+        android:textColor="@color/white"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toTopOf="@+id/map" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickViewLeft"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/joystick_bg"
+        custom:JV_buttonImage="@drawable/finger"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintStart_toStartOf="parent" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickViewRight"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/joystick_bg"
+        custom:JV_buttonImage="@drawable/finger"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="@+id/map" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/enableJoystick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:drawableLeft="@drawable/remotecontrol2"
+        android:textColor="@color/white"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/camEnableSw"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/drawmapbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-5dp"
+        android:backgroundTint="@android:color/white"
+        android:drawableTop="@drawable/airplane"
+        android:textColor="@android:color/black"
+        android:textSize="6dp"
+        android:textStyle="bold"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/enableJoystick"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ToggleButton
+        android:id="@+id/drawmapbtn2"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="-5dp"
+        android:textOff="DR"
+        android:textOn="CL"
+        android:textSize="12dp"
+        custom:layout_constraintEnd_toStartOf="@+id/drawmapbtn"
+        custom:layout_constraintTop_toBottomOf="@+id/enableJoystick"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button_grap"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/circle_button"
+        android:text="Grap"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        custom:layout_constraintBottom_toTopOf="@+id/joystickViewRight"
+        custom:layout_constraintEnd_toStartOf="@+id/enableJoystick"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:value="2"
+        android:valueFrom="0"
+        android:valueTo="10"
+        custom:layout_constraintBottom_toTopOf="@+id/box"
+        custom:layout_constraintEnd_toEndOf="@+id/map"
+        custom:layout_constraintHorizontal_bias="0.55"
+        custom:layout_constraintStart_toStartOf="@+id/map"
+        custom:layout_constraintTop_toTopOf="@+id/map"
+        custom:layout_constraintVertical_bias="1.0"
+        android:theme="@style/MyMaterialTheme"
+        custom:trackColorInactive="@color/tran_dark_gray"
+        custom:trackColorActive="@color/dark_gray"
+        custom:thumbColor="@color/dark_gray"
+        android:background="@drawable/custom_bg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

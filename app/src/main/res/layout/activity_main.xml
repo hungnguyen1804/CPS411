@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="false">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null">
+
+            <include layout="@layout/custom_toolbar"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            />
+
+        <FrameLayout
+            android:id="@+id/map_frame_back1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/map_frame_back2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/cam_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <FrameLayout
+            android:id="@+id/cam_frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/cam_frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cockpit1"
+                    android:id="@+id/cockpit_layout1"
+                    android:scaleType="fitEnd"
+                    android:baselineAlignBottom="true"
+                    android:visibility="invisible"/>
+                <ImageButton
+                    android:id="@+id/imgbtn_landing1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/landing"
+                    android:background="@null"
+                    android:visibility="invisible"
+                    />
+                <ImageButton
+                    android:id="@+id/imgbtn_takeoff1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/takeoff"
+                    android:background="@null"
+                    android:visibility="invisible"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cockpit1"
+                    android:id="@+id/cockpit_layout2"
+                    android:scaleType="fitEnd"
+                    android:baselineAlignBottom="true"
+                    android:visibility="invisible"/>
+                <ImageButton
+                    android:id="@+id/imgbtn_landing2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/landing"
+                    android:background="@null"
+                    android:visibility="invisible"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_takeoff2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/takeoff"
+                    android:background="@null"
+                    android:visibility="invisible"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/map_frame_front1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/map_frame_front2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/conn_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/virtual_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/set_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_header_nav"
+        app:menu="@menu/menu_nav"/>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

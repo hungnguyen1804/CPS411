@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.378125" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable-v24/bg_dark_gray_conner_10.xml" value="0.222" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable-v24/bg_gray_conner_10.xml" value="0.222" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable-v24/bg_gray_conner_16.xml" value="0.222" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable-v24/bg_white_conner_10_border_gray.xml" value="0.222" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable/bg_white_conner_16.xml" value="0.222" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/drawable/custom_bg.xml" value="0.177" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/activity_ar_view.xml" value="0.1" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/activity_options.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/activity_unity_view.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/custom_toolbar.xml" value="0.4" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/fragment_cam.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/fragment_conn.xml" value="0.4" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/fragment_map.xml" value="0.264" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/item_category.xml" value="0.1" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/item_mode_category.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/item_mode_selected.xml" value="0.225" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/item_selected.xml" value="0.2" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/layout_dialog_setwp.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/layout_header_nav.xml" value="0.2390625" />
+        <entry key="..\:/Users/linhn/AndroidStudioProjects/Git/CPS_Lab411/app/src/main/res/layout/round_button_transparent.xml" value="0.2390625" />
+        <entry key="app/src/main/res/drawable/circle_button.xml" value="0.246" />
+        <entry key="app/src/main/res/drawable/custom_bg.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/custom_button.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.246" />
+        <entry key="app/src/main/res/drawable/ic_baseline_draw_24.xml" value="0.32" />
+        <entry key="app/src/main/res/drawable/ic_baseline_monitor_24.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/ic_rc_ic.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/ic_web.xml" value="0.3125" />
+        <entry key="app/src/main/res/drawable/rounded_button_white.xml" value="0.246" />
+        <entry key="app/src/main/res/layout/activity_ar_hand.xml" value="0.25729166666666664" />
+        <entry key="app/src/main/res/layout/activity_ar_view.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/activity_options.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_shared_camera.xml" value="0.340625" />
+        <entry key="app/src/main/res/layout/activity_unity_view.xml" value="0.2604166666666667" />
+        <entry key="app/src/main/res/layout/custom_action_bar.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.4421455938697318" />
+        <entry key="app/src/main/res/layout/custom_toolbar1.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.3179347826086957" />
+        <entry key="app/src/main/res/layout/fragment_cam.xml" value="0.3292572463768116" />
+        <entry key="app/src/main/res/layout/fragment_conn.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/fragment_map.xml" value="0.4437022900763359" />
+        <entry key="app/src/main/res/layout/fragment_selection.xml" value="0.34375" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/fragment_thingsboard.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/layout/fragment_virtual.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_virtual_cabin.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_mode_category.xml" value="0.30842391304347827" />
+        <entry key="app/src/main/res/layout/item_mode_selected.xml" value="0.30842391304347827" />
+        <entry key="app/src/main/res/layout/item_selected.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/layout_dialog_setwp.xml" value="0.30842391304347827" />
+        <entry key="app/src/main/res/layout/layout_header_nav.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/round_button_transparent.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/round_button_transparent2.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/menu/menu_nav.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/menu/settings_menu.xml" value="0.25729166666666664" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2765" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2765" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_uav.xml" value="0.2765" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

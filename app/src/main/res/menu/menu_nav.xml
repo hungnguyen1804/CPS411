@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+
+        <item android:title="@string/nav_nav">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_map"
+                    android:title="@string/nav_map"
+                    android:icon="@drawable/ic_map"/>
+
+                <item
+                    android:id="@+id/nav_cam"
+                    android:title="@string/nav_cam"
+                    android:icon="@drawable/ic_cam"/>
+
+                <item
+                    android:id="@+id/nav_con"
+                    android:title="@string/nav_con"
+                    android:icon="@drawable/ic_connect"/>
+
+                <item
+                    android:id="@+id/nav_virtualCabin"
+                    android:title="Virtual Cabin"
+                    android:icon="@drawable/ic_baseline_monitor_24"/>
+
+                <item
+                    android:id="@+id/nav_set"
+                    android:title="Setting"
+                    android:icon="@drawable/ic_settings"/>
+                <item
+                    android:id="@+id/nav_thingsboard"
+                    android:title="Thingsboard"
+                    android:icon="@drawable/server"/>
+
+            </menu>
+
+        </item>
+
+        <item android:title="About US">
+            <menu>
+                <item
+                    android:title="@string/fb"
+                    android:icon="@drawable/icons8facebook"/>
+
+                <item
+                    android:title="@string/Web"
+                    android:icon="@drawable/ic_web"/>
+
+                <item
+                    android:title="@string/email"
+                    android:icon="@drawable/ic_email"/>
+
+            </menu>
+        </item>
+
+    </group>
+</menu>

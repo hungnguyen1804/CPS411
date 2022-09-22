@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:background="@color/dark_gray"
+    android:id="@+id/custom_toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+
+            <ImageView
+                android:id="@+id/wifi_ic"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/no_connection"
+                app:layout_constraintEnd_toStartOf="@+id/batteryState"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvpercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/batterry_ic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/batterry_ic"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="5dp"
+                android:rotation="90"
+                android:src="@drawable/battery2_empty"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/batteryState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvpercent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/flightmode_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_baseline_uncheck_24"
+                app:layout_constraintEnd_toStartOf="@+id/wifi_ic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_flightmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/disconnect"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/flightmode_ic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spn_flightMode"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/flightmode_ic"
+                app:layout_constraintStart_toStartOf="@+id/tv_flightmode"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/drone"
+                app:layout_constraintEnd_toStartOf="@+id/spn_flightMode"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_armCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="2dp"
+                android:text="Disarmed"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/notification"
+                app:layout_constraintEnd_toStartOf="@+id/tv_armCheck"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/sensor_db"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/sensor_db2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageSwControlMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/takeoff" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
