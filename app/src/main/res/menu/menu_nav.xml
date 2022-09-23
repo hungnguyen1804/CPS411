@@ -30,10 +30,10 @@
                     android:id="@+id/nav_set"
                     android:title="Setting"
                     android:icon="@drawable/ic_settings"/>
-                <item
-                    android:id="@+id/nav_thingsboard"
-                    android:title="Thingsboard"
-                    android:icon="@drawable/server"/>
+<!--                <item-->
+<!--                    android:id="@+id/nav_thingsboard"-->
+<!--                    android:title="Thingsboard"-->
+<!--                    android:icon="@drawable/server"/>-->
 
             </menu>
 

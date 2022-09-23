@@ -382,39 +382,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
-        else if (id == R.id.nav_thingsboard)
-        {
-            hideLayoutVR();
-            if (getSupportFragmentManager().findFragmentByTag("thingsboard") != null) {
-                this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                //if the fragment exists, show it.
-                getSupportFragmentManager().beginTransaction().show(getSupportFragmentManager().findFragmentByTag("thingsboard")).commit();
-            } else {
-                this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                //if the fragment does not exist, add it to fragment manager.
-                getSupportFragmentManager().beginTransaction().add(R.id.set_frame, new ThingsboardFragment(), "thingsboard").commit();
-            }
-
-            if (getSupportFragmentManager().findFragmentByTag("map") != null) {
-                //if the other fragment is visible, hide it.
-                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("map")).commit();
-            }
-
-            if (getSupportFragmentManager().findFragmentByTag("con") != null) {
-                //if the other fragment is visible, hide it.
-                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("con")).commit();
-            }
-
-            if (getSupportFragmentManager().findFragmentByTag("cam") != null) {
-                //if the other fragment is visible, hide it.
-                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("cam")).commit();
-            }
-
-            if (getSupportFragmentManager().findFragmentByTag("virtual") != null) {
-                //if the other fragment is visible, hide it.
-                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("virtual")).commit();
-            }
-        }
+//        else if (id == R.id.nav_thingsboard)
+//        {
+//            hideLayoutVR();
+//            if (getSupportFragmentManager().findFragmentByTag("thingsboard") != null) {
+//                this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//                //if the fragment exists, show it.
+//                getSupportFragmentManager().beginTransaction().show(getSupportFragmentManager().findFragmentByTag("thingsboard")).commit();
+//            } else {
+//                this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//                //if the fragment does not exist, add it to fragment manager.
+//                getSupportFragmentManager().beginTransaction().add(R.id.set_frame, new ThingsboardFragment(), "thingsboard").commit();
+//            }
+//
+//            if (getSupportFragmentManager().findFragmentByTag("map") != null) {
+//                //if the other fragment is visible, hide it.
+//                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("map")).commit();
+//            }
+//
+//            if (getSupportFragmentManager().findFragmentByTag("con") != null) {
+//                //if the other fragment is visible, hide it.
+//                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("con")).commit();
+//            }
+//
+//            if (getSupportFragmentManager().findFragmentByTag("cam") != null) {
+//                //if the other fragment is visible, hide it.
+//                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("cam")).commit();
+//            }
+//
+//            if (getSupportFragmentManager().findFragmentByTag("virtual") != null) {
+//                //if the other fragment is visible, hide it.
+//                getSupportFragmentManager().beginTransaction().hide(getSupportFragmentManager().findFragmentByTag("virtual")).commit();
+//            }
+//        }
 
         mDrawerLayout.closeDrawer(GravityCompat.START);
 

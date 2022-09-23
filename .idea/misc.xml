@@ -54,9 +54,11 @@
         <entry key="app/src/main/res/layout/fragment_thingsboard.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/fragment_virtual.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_virtual_cabin.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/item_mode_category.xml" value="0.30842391304347827" />
         <entry key="app/src/main/res/layout/item_mode_selected.xml" value="0.30842391304347827" />
         <entry key="app/src/main/res/layout/item_selected.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/item_thingsboard.xml" value="0.32395833333333335" />
         <entry key="app/src/main/res/layout/layout_dialog_setwp.xml" value="0.30842391304347827" />
         <entry key="app/src/main/res/layout/layout_header_nav.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/round_button_transparent.xml" value="0.25" />

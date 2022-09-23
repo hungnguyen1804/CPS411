@@ -26,6 +26,6 @@ public class DataSensorModel {
     @Override
     public String toString() {
         return
-                "\n\nSensor Name= " + sensorName + '\n'+ "Sensor Value= " + sensorValue + '\n';
+                "Sensor Name= " + sensorName + "\n" + "Sensor Value= " + sensorValue;
     }
 }

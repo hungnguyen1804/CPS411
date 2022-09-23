@@ -1,29 +1,23 @@
-package com.example.cps_lab411;
+package com.example.cps_lab411.API;
 
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import android.app.Dialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 
-import com.android.volley.Request.Method;
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.example.cps_lab411.API.DataSensorModel;
-import com.example.cps_lab411.API.VolleyController;
+import com.example.cps_lab411.MainActivity;
+import com.example.cps_lab411.MapFragment;
+import com.example.cps_lab411.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,8 +31,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-
-public class ThingsboardFragment extends Fragment {
+public class Thingsboard extends Dialog implements View.OnClickListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     private static final String baseURL = "https://demo.thingsboard.io:443/api";
@@ -46,34 +39,22 @@ public class ThingsboardFragment extends Fragment {
     private String authToken;
 
     private ListView listView;
+    private Button btnClose;
+    private Context context;
 
-
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.fragment_thingsboard);
-//        listView = findViewById(R.id.lv_displaySensor);
-//
-//        sharedPreferences = this.getSharedPreferences(getApplicationContext().getPackageName(), Context.MODE_PRIVATE);
-//
-//        authToken = sharedPreferences.getString(AUTH_TOKEN_KEY, "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZ3V5ZW5kaW5oaHVuZzE4MDRAZ21haWwuY29tIiwidXNlcklkIjoiZjlhNjk3ZjAtMzMyMy0xMWVkLWJhYTYtMzE2NzQ1ZGVlZjM1Iiwic2NvcGVzIjpbIlRFTkFOVF9BRE1JTiJdLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2MzYwMTY0NCwiZXhwIjoxNjY1NDAxNjQ0LCJmaXJzdE5hbWUiOiJIw7luZyIsImxhc3ROYW1lIjoiTmd1eeG7hW4gxJDDrG5oIiwiZW5hYmxlZCI6dHJ1ZSwicHJpdmFjeVBvbGljeUFjY2VwdGVkIjp0cnVlLCJpc1B1YmxpYyI6ZmFsc2UsInRlbmFudElkIjoiZjc5MTRjODAtMzMyMy0xMWVkLWJhYTYtMzE2NzQ1ZGVlZjM1IiwiY3VzdG9tZXJJZCI6IjEzODE0MDAwLTFkZDItMTFiMi04MDgwLTgwODA4MDgwODA4MCJ9.4f_1HgDHoAvehQhrFFAow8mU6mssfwoYzNNLh97zX2w2Vsj97QXlF9zp6GW-74TAMDhD3WGWR7f2RQXwBh8MyA");
-//
-//        Runnable helloRunnable = new Runnable() {
-//            public void run() {
-//                addDataToScreen();
-//            }
-//        };
-//
-//        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-//        executor.scheduleAtFixedRate(helloRunnable, 0, 3, TimeUnit.SECONDS);
-//    }
+    public Thingsboard(@NonNull Context context) {
+        super(context);
+        this.context = context;
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View thingsboard = inflater.inflate(R.layout.fragment_thingsboard, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        listView = thingsboard.findViewById(R.id.lv_displaySensor);
+        setContentView(R.layout.item_thingsboard);
+        listView = findViewById(R.id.lv_displaySensor);
+        //btnClose = findViewById(R.id.btn_closeThingsboard);
+
         authToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZ3V5ZW5kaW5oaHVuZzE4MDRAZ21haWwuY29tIiwidXNlcklkIjoiZjlhNjk3ZjAtMzMyMy0xMWVkLWJhYTYtMzE2NzQ1ZGVlZjM1Iiwic2NvcGVzIjpbIlRFTkFOVF9BRE1JTiJdLCJpc3MiOiJ0aGluZ3Nib2FyZC5pbyIsImlhdCI6MTY2MzYwMTY0NCwiZXhwIjoxNjY1NDAxNjQ0LCJmaXJzdE5hbWUiOiJIw7luZyIsImxhc3ROYW1lIjoiTmd1eeG7hW4gxJDDrG5oIiwiZW5hYmxlZCI6dHJ1ZSwicHJpdmFjeVBvbGljeUFjY2VwdGVkIjp0cnVlLCJpc1B1YmxpYyI6ZmFsc2UsInRlbmFudElkIjoiZjc5MTRjODAtMzMyMy0xMWVkLWJhYTYtMzE2NzQ1ZGVlZjM1IiwiY3VzdG9tZXJJZCI6IjEzODE0MDAwLTFkZDItMTFiMi04MDgwLTgwODA4MDgwODA4MCJ9.4f_1HgDHoAvehQhrFFAow8mU6mssfwoYzNNLh97zX2w2Vsj97QXlF9zp6GW-74TAMDhD3WGWR7f2RQXwBh8MyA";
 
         Runnable helloRunnable = new Runnable() {
@@ -84,8 +65,6 @@ public class ThingsboardFragment extends Fragment {
 
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         executor.scheduleAtFixedRate(helloRunnable, 0, 3, TimeUnit.SECONDS);
-        // Inflate the layout for this fragment
-        return thingsboard;
     }
 
     private void addDataToScreen() {
@@ -97,7 +76,7 @@ public class ThingsboardFragment extends Fragment {
 
         final List<DataSensorModel> dataSensorModels = new ArrayList<>();
 
-        JsonArrayRequest jsonObjReq = new JsonArrayRequest(Method.GET, URL, null,
+        JsonArrayRequest jsonObjReq = new JsonArrayRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -121,7 +100,7 @@ public class ThingsboardFragment extends Fragment {
                                 e.printStackTrace();
                             }
                         }
-                        ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, dataSensorModels);
+                        ArrayAdapter arrayAdapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, dataSensorModels);
                         listView.setAdapter(arrayAdapter);
                     }
 
@@ -140,6 +119,14 @@ public class ThingsboardFragment extends Fragment {
                 return headers;
             }
         };
-        VolleyController.getInstance(getActivity().getApplicationContext()).addToQueue(jsonObjReq);
+        VolleyController.getInstance(context).addToQueue(jsonObjReq);
+    }
+
+    @Override
+    public void onClick(View view) {
+//        if (view.getId() == R.id.btn_closeThingsboard)
+//        {
+//            dismiss();
+//        }
     }
 }

@@ -43,6 +43,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 
+import com.example.cps_lab411.API.Thingsboard;
 import com.example.cps_lab411.Communication.EncodeData;
 import com.example.cps_lab411.EvenBus.ConntectHandleEvenbus;
 import com.example.cps_lab411.EvenBus.HandleManualControl;
@@ -109,6 +110,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private Slider mAlitudeSlider;
     LinearLayout sensorNodeLayout;
 
+    private Button mThingsboard;
+
     //Hide on VR layout
     TextView tvms, tvm, tvH, tvLat, tvLon;
     ConstraintLayout box;
@@ -159,6 +162,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         wifi = (WifiManager) requireContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
         //Reference to UI
+        mThingsboard = view.findViewById(R.id.mThingsboard);
+
         mcamFrame = view.findViewById(R.id.cam_frame);
         mtvLongitude = view.findViewById(R.id.tvLongtitude);
         mtvLatitude = view.findViewById(R.id.tvLatitude);
@@ -205,6 +210,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
         mAlitudeSlider.setVisibility(View.GONE);
 
+        //Thingsboard
+        mThingsboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Thingsboard dialog = new Thingsboard(getContext());
+                dialog.show();
+            }
+        });
+
         // Land Button
         mLandbtn.setOnClickListener(view13 -> {
             encodeData.SendCommandLand();
@@ -230,6 +244,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             }
             RobotArmParam.getInstance().setServo5(servo5);
         });
+
+
 
         // Set Drawmap function to false when start the app
         mDrawmap.setChecked(false);
